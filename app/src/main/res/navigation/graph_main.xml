@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/graph_main"
+    app:startDestination="@id/sectionListFragment">
+
+    <fragment
+        android:id="@+id/sectionListFragment"
+        android:name="com.dmitryshuba.sample.main.sectionlist.SectionListFragment"
+        android:label="SectionListFragment">
+        <action
+            android:id="@+id/action_sectionListFragment_self"
+            app:destination="@id/sectionListFragment"
+            app:enterAnim="@anim/anim_slide_enter"
+            app:exitAnim="@anim/anim_slide_exit"
+            app:popEnterAnim="@anim/anim_slide_pop_enter"
+            app:popExitAnim="@anim/anim_slide_pop_exit" />
+        <argument
+            android:name="hrefArg"
+            android:defaultValue="CENSORED"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="backButtonAvailableArg"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <argument
+        android:name="backButtonAvailableArg"
+        android:defaultValue="false" />
+</navigation>
